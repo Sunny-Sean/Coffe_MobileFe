@@ -1,21 +1,29 @@
-import { StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { COLORS, SPACING } from "../theme/theme";
 import CustomIcon from "./CustomIcon";
 // import LinearGradient from "react-native-linear-gradient";
 import { LinearGradient } from "expo-linear-gradient";
+import { useEffect } from "react";
+
+// function test1() {
+//   useEffect(function () {
+//     getCoffee().then((data) => console.log(data));
+//   }, []);
+// }
 
 function GradientBGIcon({ name, color, size }) {
   return (
-    <View style={styles.Container}>
+    <Pressable style={styles.Container}>
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
-        colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+        // colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+        colors={["#f5dab5", "#d1c0ad"]}
         style={styles.LinearGradient}
       >
         <CustomIcon name={name} color={color} size={size} />
       </LinearGradient>
-    </View>
+    </Pressable>
   );
 }
 
@@ -24,7 +32,8 @@ export default GradientBGIcon;
 const styles = StyleSheet.create({
   Container: {
     borderWidth: 2,
-    borderColor: COLORS.secondaryDarkGreyHex,
+    // borderColor: COLORS.secondaryDarkGreyHex,
+    borderColor: "#afa08e",
     borderRadius: SPACING.space_12,
     alignItems: "center",
     justifyContent: "center",

@@ -83,7 +83,8 @@ export default FavoritesScreen;
 const styles = StyleSheet.create({
   ScreenContainer: {
     flex: 1,
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#EEDCC6",
   },
   ScrollViewFlex: {
     flexGrow: 1,

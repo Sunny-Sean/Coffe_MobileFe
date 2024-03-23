@@ -63,11 +63,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
     color: COLORS.primaryWhiteHex,
+    color: "#693a27",
   },
   HeaderSubtitle: {
     fontWeight: "400",
     fontSize: 13,
-    color: COLORS.primaryWhiteHex,
+    color: COLORS.primaryOrangeHex,
   },
   HeaderPrice: {
     fontWeight: "600",

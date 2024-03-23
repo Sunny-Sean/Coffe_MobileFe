@@ -1,16 +1,19 @@
-import { Image, StyleSheet, View } from "react-native";
+import { Image, Pressable, StyleSheet, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { COLORS } from "../theme/theme";
+import { useContext } from "react";
+import { AuthContext } from "../store/auth-context";
 
 function ProfilePic({ name, color, size }) {
+  const authCtx = useContext(AuthContext);
   return (
-    <View style={styles.ImageContainer}>
+    <Pressable style={styles.ImageContainer} onPress={authCtx.logout}>
       <Image
         style={styles.Image}
         // source={{ uri: "../assets/app_images/avatar.png" }}
         source={require("../assets/app_images/chibi2.jpg")}
       />
-    </View>
+    </Pressable>
   );
 }
 
@@ -22,7 +25,8 @@ const styles = StyleSheet.create({
     height: 36,
     borderRadius: 12,
     borderWidth: 2,
-    borderColor: COLORS.secondaryDarkGreyHex,
+    // borderColor: COLORS.secondaryDarkGreyHex,
+    borderColor: "#afa08e",
     alignItems: "center",
     justifyContent: "center",
     overflow: "hidden",

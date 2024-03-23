@@ -11,9 +11,7 @@ function PaymentMethod({ paymentMode, name, icon, isIcon }) {
         styles.PaymentCardContainer,
         {
           borderColor:
-            paymentMode === name
-              ? COLORS.primaryOrangeHex
-              : COLORS.primaryGreyHex,
+            paymentMode === name ? COLORS.primaryOrangeHex : "#FFF5E9",
         },
       ]}
     >
@@ -21,7 +19,7 @@ function PaymentMethod({ paymentMode, name, icon, isIcon }) {
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          colors={["#89765b", "#cba06cfa"]}
           style={styles.LinearGradientWallet}
         >
           <View style={styles.WalletRow}>
@@ -38,7 +36,8 @@ function PaymentMethod({ paymentMode, name, icon, isIcon }) {
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          // colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          colors={["#89765b", "#cba06cfa"]}
           style={styles.LinearGradientRegular}
         >
           <Image source={icon} style={styles.PaymentImage} />
@@ -54,7 +53,7 @@ export default PaymentMethod;
 const styles = StyleSheet.create({
   PaymentCardContainer: {
     borderRadius: 30,
-    backgroundColor: COLORS.primaryGreyHex,
+    backgroundColor: "#FFF5E9",
     borderWidth: 3,
   },
   LinearGradientWallet: {
@@ -64,17 +63,19 @@ const styles = StyleSheet.create({
     padding: 12,
     paddingHorizontal: 24,
     gap: 24,
-    borderRadius: 30,
+    borderRadius: 27,
   },
   PaymentTitle: {
     fontWeight: "bold",
     fontSize: 16,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   PaymentPrice: {
     fontWeight: "800",
     fontSize: 16,
-    color: COLORS.secondaryLightGreyHex,
+    // color: COLORS.secondaryLightGreyHex,
+    color: "#693a27",
   },
   LinearGradientRegular: {
     flexDirection: "row",

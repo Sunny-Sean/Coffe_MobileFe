@@ -14,7 +14,8 @@ function OrderItemCard({
     <LinearGradient
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
-      colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+      // colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+      colors={["#f5dab5", "#b39c7f"]}
       style={styles.CardLinearGradient}
     >
       <View style={styles.CardInfoContainer}>
@@ -98,20 +99,23 @@ const styles = StyleSheet.create({
   CardTitle: {
     fontWeight: "600",
     fontSize: 18,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   CardSubtitle: {
     fontWeight: "800",
     fontSize: 12,
-    color: COLORS.secondaryLightGreyHex,
+    // color: COLORS.secondaryLightGreyHex,
+    color: "#693a27",
   },
   CardCurrency: {
     fontWeight: "bold",
     fontSize: 20,
-    color: COLORS.primaryOrangeHex,
+    color: "#693a27",
   },
   CardPrice: {
-    color: COLORS.primaryWhiteHex,
+    color: "#693a27",
+    // color: "#230C02",
   },
   CardTableRow: {
     flex: 1,
@@ -120,44 +124,45 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   SizeBoxLeft: {
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#98634e",
     height: 45,
     flex: 1,
     borderTopLeftRadius: 10,
     borderBottomLeftRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    borderRightWidth: 1,
+    // borderRightWidth: 1,
     borderRightColor: COLORS.primaryGreyHex,
   },
   SizeText: {
     fontWeight: "600",
-    color: COLORS.secondaryLightGreyHex,
+    color: "#230C02",
   },
   PriceBoxRight: {
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#f6ddd3",
     height: 45,
     flex: 1,
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    borderLefttWidth: 1,
     borderLeftColor: COLORS.primaryGreyHex,
   },
   PriceCurrence: {
     fontWeight: "bold",
     fontSize: 16,
-    color: COLORS.primaryOrangeHex,
+    color: "#693a27",
   },
   Price: {
-    color: COLORS.primaryWhiteHex,
+    color: "#88310c",
   },
   CardQuantityPriceText: {
     flex: 1,
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 18,
-    color: COLORS.primaryOrangeHex,
+    color: "#693a27",
   },
 });

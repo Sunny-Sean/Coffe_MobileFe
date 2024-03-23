@@ -24,13 +24,13 @@ const PaymentList = [
     isIcon: true,
   },
   {
-    name: "Google Pay",
-    icon: require("../assets/app_images/gpay.png"),
+    name: "Momo Pay",
+    icon: require("../assets/app_images/momo.png"),
     isIcon: false,
   },
   {
-    name: "Apple Pay",
-    icon: require("../assets/app_images/applepay.png"),
+    name: "Viettel Pay",
+    icon: require("../assets/app_images/vt.png"),
     isIcon: false,
   },
   {
@@ -70,7 +70,7 @@ function PaymentScreen({ navigation, route }) {
 
   return (
     <View style={styles.ScreentContainer}>
-      <StatusBar backgroundColor={COLORS.primaryBlackHex} />
+      <StatusBar backgroundColor={COLORS.primaryBlackHex} hidden={true} />
 
       {showAnimation ? (
         <PopUpAnimation
@@ -111,7 +111,7 @@ function PaymentScreen({ navigation, route }) {
                   borderColor:
                     paymentMode === "Credit Card"
                       ? COLORS.primaryOrangeHex
-                      : COLORS.primaryGreyHex,
+                      : "#FFF5E9",
                 },
               ]}
             >
@@ -121,7 +121,8 @@ function PaymentScreen({ navigation, route }) {
                   start={{ x: 0, y: 0 }}
                   end={{ x: 1, y: 1 }}
                   style={styles.LinearGradientStyle}
-                  colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+                  // colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+                  colors={["#89765b", "#cba06cfa"]}
                 >
                   <View style={styles.CreditCardRow}>
                     <MaterialCommunityIcons
@@ -136,10 +137,10 @@ function PaymentScreen({ navigation, route }) {
                     />
                   </View>
                   <View style={styles.CreditCardNumberContainer}>
-                    <Text style={styles.CreditCardNumber}>9934</Text>
-                    <Text style={styles.CreditCardNumber}>9325</Text>
-                    <Text style={styles.CreditCardNumber}>9348</Text>
-                    <Text style={styles.CreditCardNumber}>3864</Text>
+                    <Text style={styles.CreditCardNumber}>1234</Text>
+                    <Text style={styles.CreditCardNumber}>5678</Text>
+                    <Text style={styles.CreditCardNumber}>9876</Text>
+                    <Text style={styles.CreditCardNumber}>5432</Text>
                   </View>
                   <View style={styles.CreditCardRow}>
                     <View style={styles.CreditCardNameContainer}>
@@ -189,7 +190,8 @@ export default PaymentScreen;
 const styles = StyleSheet.create({
   ScreentContainer: {
     flex: 1,
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#EEDCC6",
   },
   ScrollViewFlex: {
     flexGrow: 1,
@@ -204,7 +206,8 @@ const styles = StyleSheet.create({
   HeaderText: {
     fontWeight: "bold",
     fontSize: 20,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   EmptyView: {
     height: 36,
@@ -223,8 +226,9 @@ const styles = StyleSheet.create({
   CreditCartTitle: {
     fontWeight: "bold",
     fontSize: 14,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
     marginLeft: 10,
+    color: "#230C02",
   },
   CreditCardBG: {
     backgroundColor: COLORS.primaryGreyHex,
@@ -249,18 +253,21 @@ const styles = StyleSheet.create({
   CreditCardNumber: {
     fontWeight: "bold",
     fontSize: 18,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#693a27",
     letterSpacing: 6,
   },
   CreditCardNameSubitle: {
     fontWeight: "800",
     fontSize: 12,
-    color: COLORS.secondaryLightGreyHex,
+    // color: COLORS.secondaryLightGreyHex,
+    color: "#230C02",
   },
   CreditCardNameTitle: {
     fontWeight: "600",
     fontSize: 16,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#693a27",
   },
   CreditCardNameContainer: {
     alignItems: "flex-start",

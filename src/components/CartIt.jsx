@@ -27,7 +27,8 @@ function CartIt({
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          // colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          colors={["#f5dab5", "#b39c7f"]}
           style={styles.CartItemLinearGradient}
         >
           <View style={styles.CartItemRow}>
@@ -102,7 +103,8 @@ function CartIt({
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          // colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+          colors={["#f5dab5", "#b39c7f"]}
           style={styles.CartItemSingleLinearGradient}
         >
           <View>
@@ -189,12 +191,14 @@ const styles = StyleSheet.create({
   CartItemTitle: {
     fontWeight: "600",
     fontSize: 18,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   CartItemSubtitle: {
     fontWeight: "800",
     fontSize: 12,
-    color: COLORS.secondaryLightGreyHex,
+    // color: COLORS.secondaryLightGreyHex,
+    color: "#230C02",
   },
   CartItemRoastedContainer: {
     height: 50,
@@ -202,7 +206,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: COLORS.primaryDarkGreyHex,
+    // backgroundColor: COLORS.primaryDarkGreyHex,
+    backgroundColor: "#693a27",
   },
   CartItemRoastedText: {
     fontWeight: "800",
@@ -223,7 +228,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   SizeBox: {
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#693a27",
     height: 40,
     width: 90,
     borderRadius: 10,
@@ -238,17 +244,21 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
     color: COLORS.primaryOrangeHex,
+    color: "#693a27",
   },
   SizePrice: {
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   CartItemIcon: {
-    backgroundColor: COLORS.primaryOrangeHex,
+    // backgroundColor: COLORS.primaryOrangeHex,
+    backgroundColor: "#693a27",
     padding: 12,
     borderRadius: 10,
   },
   CartItemQuantityContainer: {
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#693a27",
     width: 60,
     borderRadius: 10,
     borderWidth: 2,
@@ -260,6 +270,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
     color: COLORS.primaryWhiteHex,
+    // color: "#230C02",
   },
   CartItemSingleLinearGradient: {
     flexDirection: "row",

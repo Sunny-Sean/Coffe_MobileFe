@@ -36,7 +36,8 @@ function FavoritesItemCard({
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
-        colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+        // colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+        colors={["#f5dab5", "#b39c7f"]}
         style={styles.ContainerLinearGradient}
       >
         <Text style={styles.DescriptionTitle}>Description</Text>
@@ -60,12 +61,14 @@ const styles = StyleSheet.create({
   DescriptionTitle: {
     fontWeight: "bold",
     fontSize: 16,
-    color: COLORS.secondaryLightGreyHex,
+    // color: COLORS.secondaryLightGreyHex,
+    color: "#230C02",
     letterSpacing: 3,
   },
   DescriptionText: {
     fontWeight: "800",
     fontSize: 14,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
 });

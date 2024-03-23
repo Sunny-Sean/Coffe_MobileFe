@@ -14,7 +14,7 @@ import { useState } from "react";
 import PaymentFooter from "../components/PaymentFooter";
 
 function DetailsScreen({ navigation, route }) {
-  console.log("route = ", route.params);
+  // console.log("route = ", route.params);
   const ItemofIndex = useStore((state) =>
     route.params.type === "Coffee" ? state.CoffeeList : state.BeanList
   )[route.params.index];
@@ -62,7 +62,7 @@ function DetailsScreen({ navigation, route }) {
   }
   return (
     <View style={styles.ScreenContainer}>
-      <StatusBar backgroundColor={COLORS.primaryBlackHex} />
+      <StatusBar backgroundColor={COLORS.primaryBlackHex} hidden={true} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.ScrollViewFlex}
@@ -120,7 +120,8 @@ function DetailsScreen({ navigation, route }) {
                     borderColor:
                       data.size === price.size
                         ? COLORS.primaryOrangeHex
-                        : COLORS.primaryDarkGreyHex,
+                        : // : COLORS.primaryDarkGreyHex,
+                          "#fbd09c99",
                   },
                 ]}
               >
@@ -168,7 +169,8 @@ export default DetailsScreen;
 const styles = StyleSheet.create({
   ScreenContainer: {
     flex: 1,
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#EEDCC6",
   },
   ScrollViewFlex: {
     flexGrow: 1,
@@ -181,14 +183,16 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     letterSpacing: 3,
     fontSize: 16,
-    color: COLORS.primaryLightGreyHex,
+    // color: COLORS.primaryLightGreyHex,
+    color: "#230C02",
     marginBottom: 10,
   },
   DescriptionText: {
     letterSpacing: 0.5,
     fontWeight: "800",
     fontSize: 14,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
     marginBottom: 30,
   },
   SizeOuterContainer: {
@@ -199,7 +203,8 @@ const styles = StyleSheet.create({
   },
   SizeBox: {
     flex: 1,
-    backgroundColor: COLORS.primaryDarkGreyHex,
+    // backgroundColor: COLORS.primaryDarkGreyHex,
+    backgroundColor: "#f8dcb9",
     alignItems: "center",
     justifyContent: "center",
     height: 48,

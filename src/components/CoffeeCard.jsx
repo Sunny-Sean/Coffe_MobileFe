@@ -30,15 +30,18 @@ function CoffeeCard({
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       style={styles.CardLinearGradientContainer}
-      colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+      // colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+      // colors={["#f5dab5", "#d1c0ad"]}
+      colors={["#f5dab5", "#b39c7f"]}
     >
       <ImageBackground
         resizeMode="cover"
         style={styles.CardImageBG}
-        source={imagelink_square}
+        // source={imagelink_square}
+        source={{ uri: imagelink_square }}
       >
         <View style={styles.CardRatingContainer}>
-          <AntDesign name="star" size={16} color={COLORS.primaryOrangeHex} />
+          <AntDesign name="star" size={16} color={"#230C02"} />
           <Text style={styles.CardRatingText}>{average_rating}</Text>
         </View>
       </ImageBackground>
@@ -65,7 +68,8 @@ function CoffeeCard({
           <BGIcon
             color={COLORS.primaryWhiteHex}
             name="add"
-            BGColor={COLORS.primaryOrangeHex}
+            // BGColor={COLORS.primaryOrangeHex}
+            BGColor="#693a27"
             size={10}
           />
         </TouchableOpacity>
@@ -104,6 +108,7 @@ const styles = StyleSheet.create({
   CardRatingText: {
     fontWeight: "600",
     color: COLORS.primaryWhiteHex,
+    // color: "#230C02",
     lineHeight: 22,
     fontSize: 14,
   },
@@ -116,19 +121,23 @@ const styles = StyleSheet.create({
   CardTitle: {
     fontWeight: "600",
     color: COLORS.primaryWhiteHex,
+    color: "#230C02",
     fontSize: 16,
   },
   CardSubtitle: {
     fontWeight: "500",
     color: COLORS.primaryWhiteHex,
+    color: "#230C02",
     fontSize: 10,
   },
   CardPriceCurrency: {
     fontWeight: "bold",
     color: COLORS.primaryOrangeHex,
+    color: "#693a27",
     fontSize: 18,
   },
   CartPrice: {
     color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
 });

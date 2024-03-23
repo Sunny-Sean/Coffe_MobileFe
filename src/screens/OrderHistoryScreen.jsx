@@ -16,11 +16,11 @@ import { useState } from "react";
 import OrderHistoryCard from "../components/OrderHistoryCard";
 
 function OrderHistoryScreen({ navigation }) {
-  const OrderHistoryList = useStore((state) => state.OrderHistoryList);
+  const C = useStore((state) => state.OrderHistoryList);
   const tabBarHeight = useBottomTabBarHeight();
   const [showAnimation, setShowAnimation] = useState(false);
-  console.log("History length = ", OrderHistoryList.length);
-  console.log("History = ", OrderHistoryList);
+  // console.log("History length = ", OrderHistoryList.length);
+  // console.log("History = ", OrderHistoryList);
 
   function navigationHandler({ index, id, type }) {
     navigation.push("Details", {
@@ -35,10 +35,14 @@ function OrderHistoryScreen({ navigation }) {
     setTimeout(() => {
       setShowAnimation(false);
     }, 2000);
+
+    // setTimeout(() => {
+    //   navigation.push("FeedBack");
+    // }, 2000);
   }
   return (
     <View style={styles.ScreenContainer}>
-      <StatusBar backgroundColor={COLORS.primaryBlackHex} />
+      <StatusBar backgroundColor={COLORS.primaryBlackHex} hidden={true} />
 
       {showAnimation ? (
         <PopUpAnimation
@@ -92,10 +96,13 @@ export default OrderHistoryScreen;
 const styles = StyleSheet.create({
   ScreenContainer: {
     flex: 1,
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#EEDCC6",
   },
   LottieAnimation: {
     height: 250,
+    // flex: 1,
+    // height: "100%",
   },
   ScrollViewFlex: {
     flexGrow: 1,

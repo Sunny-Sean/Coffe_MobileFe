@@ -79,8 +79,20 @@ function ImageBackgroundInfo({
           <View style={styles.ImageInfoInnerContainer}>
             <View style={styles.InfoContainerRow}>
               <View>
-                <Text style={styles.ItemTitleText}>{name}</Text>
-                <Text style={styles.ItemSubtitleText}>
+                <Text
+                  style={[
+                    styles.ItemTitleText,
+                    { color: type === "Bean" ? "#d25018" : "#230C02" },
+                  ]}
+                >
+                  {name}
+                </Text>
+                <Text
+                  style={[
+                    styles.ItemSubtitleText,
+                    { color: type === "Bean" ? "#d25018" : "#230C02" },
+                  ]}
+                >
                   {special_ingredient}
                 </Text>
               </View>
@@ -89,7 +101,8 @@ function ImageBackgroundInfo({
                   <MaterialCommunityIcons
                     name={type === "Bean" ? "seed" : "coffee"}
                     size={type === "Bean" ? 18 : 24}
-                    color={COLORS.primaryOrangeHex}
+                    // color={COLORS.primaryOrangeHex}
+                    color="#230C02"
                   />
                   <Text
                     style={[
@@ -104,7 +117,8 @@ function ImageBackgroundInfo({
                   <Entypo
                     name={type === "Bean" ? "location-pin" : "drop"}
                     size={16}
-                    color={COLORS.primaryOrangeHex}
+                    // color={COLORS.primaryOrangeHex}
+                    color="#230C02"
                   />
                   <Text style={styles.PropertyTextLast}>{ingredients}</Text>
                 </View>
@@ -116,9 +130,24 @@ function ImageBackgroundInfo({
                   name="star"
                   size={20}
                   color={COLORS.primaryOrangeHex}
+                  // color="#693a27"
                 />
-                <Text style={styles.RatingText}>{average_rating}</Text>
-                <Text style={styles.RatingCountText}>({ratings_count})</Text>
+                <Text
+                  style={[
+                    styles.RatingText,
+                    { color: type === "Bean" ? "#d25018" : "#230C02" },
+                  ]}
+                >
+                  {average_rating}
+                </Text>
+                <Text
+                  style={[
+                    styles.RatingCountText,
+                    { color: type === "Bean" ? "#d25018" : "#230C02" },
+                  ]}
+                >
+                  ({ratings_count})
+                </Text>
               </View>
               <View style={styles.RoastedContainer}>
                 <Text style={styles.RoastedText}>{roasted}</Text>
@@ -170,12 +199,14 @@ const styles = StyleSheet.create({
   ItemTitleText: {
     fontWeight: "bold",
     fontSize: 24,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   ItemSubtitleText: {
     fontWeight: "600",
     fontSize: 12,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   ItemPropertiesContainer: {
     flexDirection: "row",
@@ -188,17 +219,20 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#FFF5E9",
   },
   PropertyTextFirst: {
     fontWeight: "600",
     fontSize: 10,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   PropertyTextLast: {
     fontWeight: "600",
     fontSize: 10,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
     marginTop: 8,
   },
   RatingContainer: {
@@ -209,12 +243,14 @@ const styles = StyleSheet.create({
   RatingText: {
     fontWeight: "bold",
     fontSize: 18,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   RatingCountText: {
     fontWeight: "800",
     fontSize: 12,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
   RoastedContainer: {
     height: 55,
@@ -222,11 +258,13 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#FFF5E9",
   },
   RoastedText: {
     fontWeight: "800",
     fontSize: 10,
-    color: COLORS.primaryWhiteHex,
+    // color: COLORS.primaryWhiteHex,
+    color: "#230C02",
   },
 });

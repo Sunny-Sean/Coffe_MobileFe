@@ -24,7 +24,7 @@ function CartScreen({ navigation, route }) {
   const decrementCartItemQuantity = useStore(
     (state) => state.decrementCartItemQuantity
   );
-  console.log("CartList = ", CartList.length);
+  // console.log("CartList = ", CartList.length);
   const tabBarHeight = useBottomTabBarHeight();
 
   function buttonPressHandler() {
@@ -42,7 +42,7 @@ function CartScreen({ navigation, route }) {
   }
   return (
     <View style={styles.ScreenContainer}>
-      <StatusBar backgroundColor={COLORS.primaryBlackHex} />
+      <StatusBar backgroundColor={COLORS.primaryBlackHex} hidden={true} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.ScrollViewFlex}
@@ -107,7 +107,8 @@ export default CartScreen;
 const styles = StyleSheet.create({
   ScreenContainer: {
     flex: 1,
-    backgroundColor: COLORS.primaryBlackHex,
+    // backgroundColor: COLORS.primaryBlackHex,
+    backgroundColor: "#EEDCC6",
   },
   ScrollViewFlex: {
     flexGrow: 1,
